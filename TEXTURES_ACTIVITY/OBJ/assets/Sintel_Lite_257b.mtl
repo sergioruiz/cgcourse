@@ -1,0 +1,280 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 6.1 x64 6.1.2.6638
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl SINTEL_001
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0.8 0.8 0.8
+illum 2
+Ns 978.431
+map_Kd sintel_teeth_diff.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_002
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0.1 0.1 0.1
+illum 2
+Ns 47.0588
+map_Kd sintel_skin_diff.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_003
+Ka 0 0 0
+Kd 0.0 0.121828 0.721828
+Ks 0.5 0.5 0.5
+illum 2
+Ns 96.0784
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_004
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0.287238 0.365131 0.329389
+illum 2
+Ns 615.686
+map_Kd sintel_teeth_diff.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_005
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 1 1 1
+illum 2
+Ns 292.157
+map_Kd sintel_eyeball_diff.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_006
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0 0 0
+illum 2
+Ns 2
+map_Kd sintel_eyes2.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_007
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 1 1 1
+illum 2
+Ns 37.2549
+map_Kd leather_06_diff.tga
+map_bump leather_06_diff.tga
+bump leather_06_diff.tga
+map_opacity 
+map_d 
+refl 
+map_kS leather_06_diff.tga
+map_kA 
+map_Ns 
+
+newmtl SINTEL_008
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 1 1 1
+illum 2
+Ns 37.2549
+map_Kd sintel_boots.tga
+map_bump sintel_boots.tga
+bump sintel_boots.tga
+map_opacity 
+map_d 
+refl 
+map_kS sintel_boots.tga
+map_kA 
+map_Ns 
+
+newmtl SINTEL_009
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0 0 0
+illum 2
+Ns 56.8627
+map_Kd sintel_hair_diff.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_010
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0 0 0
+illum 2
+Ns 96.0784
+d 0
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_011
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 1 1 1
+illum 2
+Ns 76.4706
+map_Kd sintel_pants.tga
+map_bump sintel_pants.tga
+bump sintel_pants.tga
+map_opacity 
+map_d 
+refl 
+map_kS sintel_pants.tga
+map_kA 
+map_Ns 
+
+newmtl SINTEL_012
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0.020524 0.021867 0.025895
+illum 2
+Ns 84.3137
+map_Kd sintel_sweater_painted.tga
+map_bump sintel_sweater_painted.tga
+bump sintel_sweater_painted.tga
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_013
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0.02 0.02 0.02
+illum 2
+Ns 37.2549
+map_Kd sintel_sweater_painted.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_014
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0.003079 0.00328 0.003884
+illum 2
+Ns 37.2549
+map_Kd sintel_sweater_painted.tga
+map_bump sintel_sweater_painted.tga
+bump sintel_sweater_painted.tga
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_015
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 0.104313 0.106824 0.117646
+illum 2
+Ns 17.6471
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_016
+Ka 0 0 0
+Kd 0.721569 0.721569 0.721569
+Ks 1 1 1
+illum 2
+Ns 17.6471
+d 0
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl SINTEL_017
+Ka 0 0 0
+Kd 0.219608 0.0196078 0.0156863
+Ks 0.1 0.042346 0
+illum 2
+Ns 96.0784
+map_Kd sintel_hair.tga
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
