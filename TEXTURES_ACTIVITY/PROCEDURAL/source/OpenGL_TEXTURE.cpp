@@ -15,6 +15,7 @@
 #endif
 
 #include <stdio.h>
+#include <time.h>
 #include "cCube.h"
 
 Cube*		cube0;
@@ -141,6 +142,7 @@ void reshape( int w, int h )
 //
 int main( int argc, char** argv )
 {
+	srand(time(NULL));
 	glutInit( &argc, argv );
 	glutInitDisplayMode( GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH );
 	glutInitWindowSize( 500, 500 );
