@@ -39,6 +39,29 @@ void init() // FOR GLUT LOOP
 	glLoadIdentity();					// Reset 3D view matrix.
 }
 
+
+void axes(float scale)
+{
+	glLineWidth(3);
+	glBegin(GL_LINES);
+	{
+		glColor3f(1, 0, 0); // red
+		glVertex3f(0, 0, 0);
+		glVertex3f(scale, 0, 0);
+
+		glColor3f(0, 1, 0); // green
+		glVertex3f(0, 0, 0);
+		glVertex3f(0, scale, 0);
+
+		glColor3f(0, 0, 1); // blue
+		glVertex3f(0, 0, 0);
+		glVertex3f(0, 0, scale);
+	}
+	glEnd();
+}
+
+
+
 void display()							// Called for each frame (about 60 times per second).
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);				// Clear color and depth buffers.
@@ -47,9 +70,7 @@ void display()							// Called for each frame (about 60 times per second).
 		      0.0, 0.0, 0.0,										// To where the camera points at.
 		      0.0, 1.0, 0.0);										// "UP" vector.
 
-	glColor3f(1.0f, 1.0f, 0.0f);									// Yellow
-	glutWireTeapot(1);
-
+	axes(5);
 	glutSwapBuffers();												// Swap the hidden and visible buffers.
 }
 
