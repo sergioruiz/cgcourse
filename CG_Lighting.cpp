@@ -46,10 +46,10 @@ void init()
 	rotation = 0;
 //->MATERIAL 0 BEGINS
 	mat0_ambient = new GLfloat[4]; //<----------------------------Reserve memory
-	mat0_ambient[0] = 0.5f; //<-----------------------------------kd0r
-	mat0_ambient[1] = 0.0f; //<-----------------------------------kd0g
-	mat0_ambient[2] = 0.0f; //<-----------------------------------kd0b
-	mat0_ambient[3] = 1.0f; //<-----------------------------------kd0a
+	mat0_ambient[0] = 0.5f; //<-----------------------------------ka0r
+	mat0_ambient[1] = 0.0f; //<-----------------------------------ka0g
+	mat0_ambient[2] = 0.0f; //<-----------------------------------ka0b
+	mat0_ambient[3] = 1.0f; //<-----------------------------------ka0a
 
 	mat0_diffuse = new GLfloat[4]; //<----------------------------Reserve memory
 	mat0_diffuse[0] = 1.0f; //<-----------------------------------kd0r
@@ -110,10 +110,10 @@ void init()
 // Enable LIGHT 0:
 	glEnable(GL_LIGHT0);
 
-	glEnable(GL_DEPTH_TEST);			// Enable check for close and far objects.
-	glClearColor(0.0, 0.0, 0.0, 0.0);	// Clear the color state.
-	glMatrixMode(GL_MODELVIEW);			// Go to 3D mode.
-	glLoadIdentity();					// Reset 3D view matrix.
+	glEnable(GL_DEPTH_TEST);										// Enable check for close and far objects.
+	glClearColor(0.0, 0.0, 0.0, 0.0);									// Clear the color state.
+	glMatrixMode(GL_MODELVIEW);										// Go to 3D mode.
+	glLoadIdentity();											// Reset 3D view matrix.
 }
 
 
@@ -137,10 +137,10 @@ void axes(float scale)
 	glEnd();
 }
 
-void display()														// Called for each frame (about 60 times per second).
+void display()													// Called for each frame (about 60 times per second).
 {
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);				// Clear color and depth buffers.
-	glLoadIdentity();												// Reset 3D view matrix.
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);							// Clear color and depth buffers.
+	glLoadIdentity();											// Reset 3D view matrix.
 	gluLookAt(0.0, 0.0, 5.0,										// Where the camera is.
 		      0.0, 0.0, 0.0,										// To where the camera points at.
 		      0.0, 1.0, 0.0);										// "UP" vector.
@@ -153,12 +153,12 @@ void display()														// Called for each frame (about 60 times per second)
 	glMaterialfv(GL_FRONT, GL_SHININESS, mat0_shininess);
 
 	glRotatef(rotation, 0, 1, 0);
-	glutSolidSphere(1, 20, 20);
+	glutSolidSphere(1, 30, 30);
 	
-	glutSwapBuffers();												// Swap the hidden and visible buffers.
+	glutSwapBuffers();											// Swap the hidden and visible buffers.
 }
 
-void idle()															// Called when drawing is finished.
+void idle()													// Called when drawing is finished.
 {
 	rotation += 0.01f;
 	glutPostRedisplay();											// Display again.
@@ -166,9 +166,9 @@ void idle()															// Called when drawing is finished.
 
 void reshape(int x, int y)											// Called when the window geometry changes.
 {
-	glMatrixMode(GL_PROJECTION);									// Go to 2D mode.
-	glLoadIdentity();												// Reset the 2D matrix.
-	gluPerspective(40.0, (GLdouble)x / (GLdouble)y, 0.5, 50.0);		// Configure the camera lens aperture.
+	glMatrixMode(GL_PROJECTION);										// Go to 2D mode.
+	glLoadIdentity();											// Reset the 2D matrix.
+	gluPerspective(40.0, (GLdouble)x / (GLdouble)y, 0.5, 50.0);						// Configure the camera lens aperture.
 	glMatrixMode(GL_MODELVIEW);										// Go to 3D mode.
 	glViewport(0, 0, x, y);											// Configure the camera frame dimensions.
 	gluLookAt(0.0, 1.0, 4.0,
@@ -184,15 +184,15 @@ void keyboard(unsigned char key, int x, int y)
 int main(int argc, char* argv[])
 {
 	glutInit(&argc, argv);											// Init GLUT with command line parameters.
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGB);		// Use 2 buffers (hidden and visible). Use the depth buffer. Use 3 color channels.
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGB);						// Use 2 buffers (hidden and visible). Use the depth buffer. Use 3 color channels.
 	glutInitWindowSize(800, 800);
-	glutCreateWindow("CG");
+	glutCreateWindow("CG Lighting");
 	
 	init();
 	glutKeyboardFunc(keyboard);
 	glutReshapeFunc(reshape);										// Reshape CALLBACK function.
 	glutDisplayFunc(display);										// Display CALLBACK function.
-	glutIdleFunc(idle);												// Idle CALLBACK function.
-	glutMainLoop();													// Begin graphics program.
-	return 0;														// ANSI C requires a return value.
+	glutIdleFunc(idle);											// Idle CALLBACK function.
+	glutMainLoop();												// Begin graphics program.
+	return 0;												// ANSI C requires a return value.
 }
