@@ -24,6 +24,9 @@
 #include <math.h>
 // For Mac users: #include <random>
 
+#ifndef __PARTICLE
+#define __PARTICLE
+
 class Particle
 {
 
