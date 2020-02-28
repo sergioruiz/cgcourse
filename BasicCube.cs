@@ -14,6 +14,7 @@ public class BasicCube : MonoBehaviour
     private Mesh cubeMesh;      // Unity's mesh: vertices and triangles.
     private Vector3[] points;   // Our own vertices.
     private int[] indices;      // Our own triangles.
+    private MeshFilter mf;
 
     // Start is called before the first frame update
     void Start()
@@ -46,8 +47,9 @@ public class BasicCube : MonoBehaviour
 
         MeshRenderer mr = gameObject.AddComponent<MeshRenderer>();
         mr.sharedMaterial = new Material(Shader.Find("Standard"));
-        MeshFilter mf = gameObject.AddComponent<MeshFilter>();
+        mf = gameObject.AddComponent<MeshFilter>();
         mf.mesh = cubeMesh;             // Make the Mesh visible.
+        mf.mesh.RecalculateNormals();
     }
 
     // Update is called once per frame
@@ -58,7 +60,7 @@ public class BasicCube : MonoBehaviour
 
     public Mesh getMesh()
     {
-        return cubeMesh;
+        return mf.mesh;
     }
 
     public Vector3[] getPoints()
@@ -75,12 +77,14 @@ public class BasicCube : MonoBehaviour
     {
         if (ps.Length == points.Length)
         {
-            cubeMesh.vertices = ps; // Change the points to 'ps'.
+            mf.mesh.vertices = ps; // Change the points to 'ps'.
+            mf.mesh.RecalculateNormals();
         }
     }
 
     public void resetPoints()
     {
-        cubeMesh.vertices = points; // Back to the original points.
+        mf.mesh.vertices = points; // Back to the original points.
+        mf.mesh.RecalculateNormals();
     }
 }
