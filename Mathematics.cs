@@ -45,4 +45,11 @@ public class Mathematics
         float mag = Magnitude(v);
         return new Vector3(v.x/mag, v.y/mag, v.z/mag);
     }
+
+    public static float AngleBetween(Vector3 a, Vector3 b)
+    {
+        // dot(a,b) = |a|*|b|*cos(angle)
+        // angle = arccos(dot(au, bu))
+        return Mathf.Acos(Dot(Normalized(a), Normalized(b)));
+    }
 }
