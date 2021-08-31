@@ -27,11 +27,22 @@ public class Mathematics
 
     public static Vector3 Subtract(Vector3 a, Vector3 b)
     {
-        return new Vector3(a.x - b.x, a.y - b.y, a.z - b.z);
+        return new Vector3(b.x - a.x, b.y - a.y, b.z - a.z);
     }
 
     public static Vector3 Scalar(Vector3 a, float s)
     {
         return new Vector3(a.x*s, a.y*s, a.z*s);
+    }
+
+    public static float Magnitude(Vector3 v) // The length of the vector
+    {
+        return Mathf.Sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
+    }
+
+    public static Vector3 Normalized(Vector3 v) // Same vector, but magnitude = 1
+    {
+        float mag = Magnitude(v);
+        return new Vector3(v.x/mag, v.y/mag, v.z/mag);
     }
 }
