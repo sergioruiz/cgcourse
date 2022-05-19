@@ -1,0 +1,12 @@
+x, z in (-5, 5)
+y in (4.8, 5)
+p.p = (x,y,z)
+p.forces = zero
+p.forces.x in (-1, 1)
+p.forces.z in (-1, 1)
+p.r in (0.2, 0.4)
+p.g = 5.81
+p.mass = p.r * 2
+p.rc = 0.4
+p.dragUp = 0.000001
+p.dragDown = 0.07
